@@ -6,7 +6,7 @@ services:
     image: jacobalberty/unifi
     restart: unless-stopped
     volumes:
-      - "~/docker-volumes/unifi:"
+      - "~/docker-volumes/unifi:/unifi"
     ports:
       - "8080:8080/tcp"
       - "8443:8443/tcp"
