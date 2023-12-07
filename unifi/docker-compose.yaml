@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  unifi-controller:
+    container_name: unifi_controller
+    image: jacobalberty/unifi
+    restart: unless-stopped
+    volumes:
+      - "~/docker-volumes/unifi:"
+    ports:
+      - "8080:8080/tcp"
+      - "8443:8443/tcp"
+      - "3478:3478/udp"
+    environment:
+      - TZ=America/Denver
+    labels:
+      - "unifi_controller"
