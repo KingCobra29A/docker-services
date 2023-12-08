@@ -12,6 +12,6 @@ services:
       TZ: "America/Denver"
       WEBPASSWORD: ${PIHOLE-PASSWORD}
     volumes:
-      - "./etc-pihole:/etc/pihole"
-      - "./etc-dnsmasq.d:/etc/dnsmasq.d"
+      - "~/docker-volumes/pihole/etc-pihole:/etc/pihole"
+      - "~/docker-volumes/pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
     restart: unless-stopped
